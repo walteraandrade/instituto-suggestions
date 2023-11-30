@@ -5,8 +5,7 @@ const config: CodegenConfig = {
 	schema: {
 		'https://instituto-playlist.hasura.app/v1/graphql': {
 			headers: {
-				'x-hasura-admin-secret':
-					'vLeMV6qUf5qOe7I2bFtFJT5S6PtGg1T5dG8rIUKB5HSHl4TsS5omCRWUWqpUgaPh',
+				'x-hasura-admin-secret': /* paste key from env */ '',
 			},
 		},
 	},
