@@ -4,12 +4,13 @@ import App from './App.tsx';
 import './index.css';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
+const graphqlUrl = import.meta.env.VITE_GRAPHQL_ENDPOINT;
+const hasuraKey = import.meta.env.HASURA_ADMIN_SECRET;
 const client = new ApolloClient({
-	uri: import.meta.env.VITE_GRAPHQL_ENDPOINT,
+	uri: graphqlUrl,
 	cache: new InMemoryCache(),
 	headers: {
-		'x-hasura-admin-secret':
-			'vLeMV6qUf5qOe7I2bFtFJT5S6PtGg1T5dG8rIUKB5HSHl4TsS5omCRWUWqpUgaPh',
+		'x-hasura-admin-secret': hasuraKey,
 	},
 });
 
