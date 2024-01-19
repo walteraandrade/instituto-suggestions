@@ -1,13 +1,13 @@
 import { useQuery } from "@apollo/client";
 import { DefaultSpinner } from "./components/spinner";
-import { SuggestionsQueryQuery } from "./data/schema/graphql";
+import { SuggestionsQueryQuery } from "./data/graphql";
 import { SuggestionCard } from "./components/suggestion-card";
 import { SuggestionTitle } from "./components/suggestion-title";
 import { SuggestionImage } from "./components/suggestion-image";
 import { Button } from "./components/button";
 import { CreateNewSuggestion } from "./components/create-new-suggestion";
 import { Suspense } from "react";
-import { getSuggestions } from "./data/schema/queries/get-suggestions";
+import { getSuggestions } from "./data/queries/get-suggestions";
 
 function App() {
   const { data } = useQuery<SuggestionsQueryQuery>(getSuggestions);
