@@ -149,6 +149,7 @@ export type Playlist = {
   image?: Maybe<Scalars['String']['output']>;
   link?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
+  suggested_by: Scalars['String']['output'];
   updated_at: Scalars['timestamptz']['output'];
 };
 
@@ -185,6 +186,7 @@ export type Playlist_Bool_Exp = {
   image?: InputMaybe<String_Comparison_Exp>;
   link?: InputMaybe<String_Comparison_Exp>;
   name?: InputMaybe<String_Comparison_Exp>;
+  suggested_by?: InputMaybe<String_Comparison_Exp>;
   updated_at?: InputMaybe<Timestamptz_Comparison_Exp>;
 };
 
@@ -202,6 +204,7 @@ export type Playlist_Insert_Input = {
   image?: InputMaybe<Scalars['String']['input']>;
   link?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
+  suggested_by?: InputMaybe<Scalars['String']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
 };
 
@@ -214,6 +217,7 @@ export type Playlist_Max_Fields = {
   image?: Maybe<Scalars['String']['output']>;
   link?: Maybe<Scalars['String']['output']>;
   name?: Maybe<Scalars['String']['output']>;
+  suggested_by?: Maybe<Scalars['String']['output']>;
   updated_at?: Maybe<Scalars['timestamptz']['output']>;
 };
 
@@ -226,6 +230,7 @@ export type Playlist_Min_Fields = {
   image?: Maybe<Scalars['String']['output']>;
   link?: Maybe<Scalars['String']['output']>;
   name?: Maybe<Scalars['String']['output']>;
+  suggested_by?: Maybe<Scalars['String']['output']>;
   updated_at?: Maybe<Scalars['timestamptz']['output']>;
 };
 
@@ -253,6 +258,7 @@ export type Playlist_Order_By = {
   image?: InputMaybe<Order_By>;
   link?: InputMaybe<Order_By>;
   name?: InputMaybe<Order_By>;
+  suggested_by?: InputMaybe<Order_By>;
   updated_at?: InputMaybe<Order_By>;
 };
 
@@ -276,6 +282,8 @@ export enum Playlist_Select_Column {
   /** column name */
   Name = 'name',
   /** column name */
+  SuggestedBy = 'suggested_by',
+  /** column name */
   UpdatedAt = 'updated_at'
 }
 
@@ -287,6 +295,7 @@ export type Playlist_Set_Input = {
   image?: InputMaybe<Scalars['String']['input']>;
   link?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
+  suggested_by?: InputMaybe<Scalars['String']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
 };
 
@@ -306,6 +315,7 @@ export type Playlist_Stream_Cursor_Value_Input = {
   image?: InputMaybe<Scalars['String']['input']>;
   link?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
+  suggested_by?: InputMaybe<Scalars['String']['input']>;
   updated_at?: InputMaybe<Scalars['timestamptz']['input']>;
 };
 
@@ -323,6 +333,8 @@ export enum Playlist_Update_Column {
   Link = 'link',
   /** column name */
   Name = 'name',
+  /** column name */
+  SuggestedBy = 'suggested_by',
   /** column name */
   UpdatedAt = 'updated_at'
 }

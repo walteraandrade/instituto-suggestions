@@ -2,16 +2,18 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
 	overwrite: true,
-	schema: {
-		'' /* paste url from env */: {
-			headers: {
-				'x-hasura-admin-secret': /* paste key from env */ '',
+	schema: [
+		{
+			'https://instituto-playlist.hasura.app/v1/graphql': {
+				headers: {
+					'x-hasura-admin-secret': '',
+				},
 			},
 		},
-	},
+	],
 	documents: 'src/**/*.tsx',
 	generates: {
-		'src/data/schema/': {
+		'src/data/': {
 			preset: 'client',
 			plugins: [],
 		},

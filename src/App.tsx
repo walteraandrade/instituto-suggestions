@@ -1,12 +1,13 @@
 import { useQuery, gql } from '@apollo/client';
 import { DefaultSpinner } from './components/spinner';
-import { SuggestionsQueryQuery } from './data/schema/graphql';
 import { SuggestionCard } from './components/suggestion-card';
 import { SuggestionTitle } from './components/suggestion-title';
 import { SuggestionImage } from './components/suggestion-image';
 import { Button } from './components/button';
 import { CreateNewSuggestion } from './components/create-new-suggestion';
 import { Suspense } from 'react';
+import { SuggestionsQueryQuery } from './data/graphql';
+
 const query = gql`
 	query SuggestionsQuery {
 		playlist {
