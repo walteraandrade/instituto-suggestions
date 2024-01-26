@@ -1,7 +1,7 @@
 import * as React from "react";
 import { v4 as uuidv4 } from "uuid";
-import { useMutation } from "@apollo/client";
-import { insertSuggestion } from "../data/schema/mutation/insert-suggestion";
+import { insertSuggestion } from "../data/mutation/insert-suggestion";
+import { useMutation } from "../data/graphql-mutation.hook";
 
 type FormData = {
   name: string;
@@ -18,7 +18,7 @@ export const CreateNewSuggestion = () => {
     suggested_by: "",
   });
 
-  const [insertSuggestionMutation, { error }] = useMutation(insertSuggestion);
+  const [insertSuggestionMutation] = useMutation(insertSuggestion);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -53,6 +53,9 @@ export const CreateNewSuggestion = () => {
           link: formData?.suggestion,
           suggested_by: formData?.suggested_by,
         },
+      },
+      onCompleted: (data) => {
+        console.log("Mutation completa: ", data);
       },
     });
   };
